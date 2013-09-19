@@ -34,7 +34,7 @@ class Validation {
      * @param array $validations an array of Validator objects
      * @return string 
      */
-    public function validateField($key, $label, $validations) {
+    public function validateField($key, $label, array $validations) {
         $value = (isset($this->values[$key])) ? $this->values[$key] : null;
         foreach($validations as $validation) {
             if (is_a($validation, 'YASV\Validator')) {
