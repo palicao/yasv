@@ -5,7 +5,7 @@ namespace YASV\Validator;
 /**
  * Checks if the value is an integer
  */
-class Validator_Integer extends Validator {
+class Integer extends Validator {
     
     protected $error_message = '"{label}" must be an integer number';
     

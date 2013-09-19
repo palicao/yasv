@@ -5,7 +5,7 @@ namespace YASV\Validator;
 /**
  * Checks if the value is a valid email address
  */
-class Validator_Email extends Validator {
+class Email extends Validator {
     
     protected $error_message = '"{label}" must be a valid email address';
     
