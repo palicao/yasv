@@ -2,6 +2,8 @@
 
 namespace YASV\Validator;
 
+use YASV\Validator;
+
 /**
  * Checks if a value is in a list of values
  */

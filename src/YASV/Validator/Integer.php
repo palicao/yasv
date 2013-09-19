@@ -2,6 +2,8 @@
 
 namespace YASV\Validator;
 
+use YASV\Validator;
+
 /**
  * Checks if the value is an integer
  */

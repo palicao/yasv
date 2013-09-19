@@ -2,6 +2,8 @@
 
 namespace YASV\Validator;
 
+use YASV\Validator;
+
 /**
  * Checks if the value is a valid email address
  */
