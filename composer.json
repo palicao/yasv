@@ -1,0 +1,22 @@
+{
+    "name": "palicao/yasv",
+    "type": "library",
+    "description": "YASV is Yet Another Simple Validation library, mainly written for fun.",
+    "keywords": ["library", "validation", "form"],
+    "homepage": "http://github.com/palicao/yasv",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Alessandro Balasco",
+            "email": "alessandro.balasco@gmail.com",
+            "homepage": "http://github.com/palicao"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {
+            "YASV": "src/"
+        }
+    }
+}
