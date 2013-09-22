@@ -11,20 +11,11 @@ namespace YASV;
  */
 
 /**
- * Validates and sanatizes multiple values in a form
+ * Validates and sanatizes multiple values (e.g. a form) collecting errors
  */
 class Validation {
 
-    private $values;
     private $errors = array();
-    
-    /**
-     * Contains all the field's values (e.g. $_POST)
-     * @param array $values 
-     */
-    public function __construct($values) {
-        $this->values = $values;
-    }
     
     /**
      * Validates and sanatizes a value. Returns the sanatized value
@@ -34,8 +25,7 @@ class Validation {
      * @param array $validations an array of Validator objects
      * @return string 
      */
-    public function validateField($key, $label, array $validations) {
-        $value = (isset($this->values[$key])) ? $this->values[$key] : null;
+    public function validateField($value, $label, array $validations) {
         foreach($validations as $validation) {
             if (is_a($validation, 'YASV\Validator')) {
                 $old_value = $value;
@@ -43,6 +33,8 @@ class Validation {
                 if (!$validation->isValid()) {
                     $this->errors[] = $validation->getError($old_value, $label);
                 }
+            } else {
+                throw new \InvalidArgumentException('Every element of $validations array must be an object of type YASV\Validator');
             }
         }
         return $value;

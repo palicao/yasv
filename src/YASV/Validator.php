@@ -55,7 +55,7 @@ abstract class Validator implements ValidatorInterface {
         
         $missing_params = array_diff($this->required_params, array_keys($params));
         if (count($missing_params) > 0) {
-            throw new InvalidArgumentException('You must specify the following param(s): '. implode(', ', $missing_params));
+            throw new \InvalidArgumentException('You must specify the following param(s): '. implode(', ', $missing_params));
         }
         
         $this->params = $params;
