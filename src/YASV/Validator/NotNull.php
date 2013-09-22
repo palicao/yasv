@@ -5,9 +5,9 @@ namespace YASV\Validator;
 use YASV\Validator;
 
 /**
- * Checks if a checkbox is checked!
+ * Checks if a value is not null (and not empty)
  */
-class Checked extends Validator {
+class NotNull extends Validator {
     
     protected $error_message = '"{label}" must be checked';
     

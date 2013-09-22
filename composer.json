@@ -16,7 +16,8 @@
 
     "autoload": {
         "psr-0": {
-            "YASV": "src/"
+            "YASV": "src/",
+            "YASV\\Tests": "tests/"
         }
     },
     
