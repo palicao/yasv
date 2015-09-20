@@ -1,5 +1,7 @@
 <?php
 
+namespace YASV\Validator;
+
 use YASV\Validator\Choices;
 
 class ChoicesTest extends \PHPUnit_Framework_TestCase

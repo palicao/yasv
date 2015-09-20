@@ -1,5 +1,7 @@
 <?php
 
+namespace YASV\Validator;
+
 use YASV\Validator\NotNull;
 
 class NotNullTest extends \PHPUnit_Framework_TestCase
